@@ -92,14 +92,18 @@ ul {
   .h-center {
     display: block;
     position: absolute;
-    max-width: 70%;
+    transform: translate(0, -50%); // awesome trick to horizinally center
     top:50%;
+    max-width: 70%;
     left:15%;
   }
   .framed {
     background: $op-frame;
     margin-top: 6px;
-    margin-bottom: 6px;
+    margin-bottom: 6px; 
+    &.center {
+      width: 50%;
+    }      
   }
   h1, h2, p, a, .text {
     margin: 0 0;
