@@ -11,38 +11,34 @@
 		'siteTitlebar',
 		'siteFooterbar',
 		'siteHeader'
-	])	
-	/* convert the string to html format */
-	.filter('strToHtml', ['$sce', function($sce) { 
-	    return function(string) {
-	        return $sce.trustAsHtml(string);
-	    };
-	}])
-	.service('ArticlesList', ['$http', function($http) {
-		return $http.get('articles.json');
-	}])
-	.run(['ArticlesList', function(ArticlesList) {
-		ArticlesList;
-	}])
+	])
 	.config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) {
 		$routeProvider.
 		when('/landing', {
-			templateUrl: 'partials/welcome.html',
-			controller: 'LandingController'
-		})
-		.when('/lucid/:toOpen', {
-			templateUrl: 'partials/lucid.html',
-			controller: 'LucidController'
-		})
-		.when('/articles/:toOpen', {
-			templateUrl: 'partials/articles.html',
-			controller: 'ArticlesController'
-		})
-		.when('/dreamv', {
-			templateUrl: 'partials/dreamvbook.html',
-			controller: 'DreamvController'
-		})
-		.otherwise({
+			templateUrl: 'partials/landing.html',
+			controller: 'LandingCtrl'
+		}).
+		when('/integration', {
+			templateUrl: 'partials/integration.html',
+			controller: 'IntegrationCtrl'
+		}).
+		when('/intelligence', {
+			templateUrl: 'partials/intelligence.html',
+			controller: 'IntelligenceCtrl'
+		}).
+		when('/aviation', {
+			templateUrl: 'partials/aviation.html',
+			controller: 'AviationCtrl'
+		}).
+		when('/communication', {
+			templateUrl: 'partials/communication.html',
+			controller: 'CommunicationCtrl'
+		}).
+		when('/contact', {
+			templateUrl: 'partials/contact.html',
+			controller: 'ContactCtrl'
+		}).
+		otherwise({
 			redirectTo: '/landing' // default page
 		});
 		$locationProvider.html5Mode(true);

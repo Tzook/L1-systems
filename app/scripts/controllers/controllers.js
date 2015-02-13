@@ -3,12 +3,10 @@
 	angular.module('siteControllers',
 		['ngAnimate',
 		 'ui.bootstrap',
-		 'articlesController',
-		 'checkController',
-		 'mainController',
-		 'widthController',
-		 'headerController',
-		 'lucidController', 
-		 'dreamvController',
-		 'landingController']);
+		 'landing',
+		 'integration',
+		 'intelligence',
+		 'aviation',
+		 'communication',
+		 'contact']);
 })(angular);

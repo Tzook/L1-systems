@@ -17,5 +17,8 @@
 				keywords = str3;
 			}
 		};
-	});
+	})
+	.controller('HeaderController', ['$scope', 'Head', function($scope, Head) {
+		$scope.Head = Head;
+	}]);;
 })(angular);
