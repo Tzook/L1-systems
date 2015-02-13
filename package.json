@@ -1,7 +1,7 @@
 {
-  "name": "mic",
+  "name": "L1",
   "version": "0.0.1",
-  "description": "web app about lucid dreams",
+  "description": "web app about L1-Systems company",
   "main": "main.js",
   "scripts": {
     "start": "node main.js"
@@ -13,8 +13,6 @@
     "gulp": "^3.8.8",
     "gulp-develop-server": "^0.2.4",
     "gulp-ruby-sass": "^0.7.1",
-    "mongodb": "^1.4.19",
-    "mongoose": "~3.8.17",
     "prerender-node": "^1.2.0"
   },
   "engines": {
@@ -22,11 +20,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/noamelb/"
+    "url": "https://github.com/Tzook/L1-systems/"
   },
   "keywords": [
-    "lucid",
-    "dreams"
+    "L1-Systems"
   ],
   "license": "MIT"
 }
