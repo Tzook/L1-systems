@@ -16,7 +16,7 @@
 	.directive('footerBar', function() { // makes the entire footer-bar in another HTML template
 	    return {
 		  	restrict: 'E',
-		  	template: '<a tooltip-html-unsafe="{{::about}}" tooltip-trigger="click" href="">About</a>',
+		  	template: '<span class="footer-wrap"><a tooltip-html-unsafe="{{::about}}" tooltip-trigger="click" href="">About</a></span>',
 		  	controller: 'FooterController'
 	    };
 	});

@@ -1,9 +1,9 @@
 <div class="top-part">
 	<div class="main-bar">
 		<ul class="bar-list">
-			<li><a id="logo" href="/landing">L1-Systems</a></li>
+			<li class="logo"><a href="/landing"><img src="../images/logo.png" alt="L1-Systems logo"></a></li>
 			<li ng-repeat="li in titlebar">
-				<a ng-class="{'bar-pressed':li.isClicked}" ng-href="{{::li.url}}">{{::li.content}}</a>
+				<a ng-class="{'clicked':li.isClicked}" ng-href="{{::li.url}}">{{::li.content}}</a>
 			</li>
 		</ul>
 	</div>

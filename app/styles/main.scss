@@ -8,29 +8,28 @@ $bg-color: #38333b;
 $main-color: #d20000;
 $second-color: #fff;
 $clicked: silver;
+$footer-color: rgba(0,0,0,0.9);
 $op-frame: rgba(0,0,0,0.7);
+$op-background: rgba(255,255,255,0.35);
 
   
 $push:10px;
 $width:960px;
 $min-width:250px;
 $min-height:200px;
-$bar-height:56px; 
+$bar-height:58px; 
 
 /*
- * DAY SET
- * =======
+ * HEADER & FIXES
+ * ==============
  */
-$black-day:rgba(0,0,0,0.05);
-$bar-bg-day:#FFAF0A;   
 
 html {
   width: 100%;
   height: 100%;
   -ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-  direction: rtl;
-  transition: all 1s linear;
+  direction: ltr;
 } 
 body {
 	font-family: 'Open Sans', sans-serif;
@@ -38,8 +37,16 @@ body {
   height: 100%;
   margin: 0 0;
   position: relative;
-  background: $bg-color;
-  overflow-x: hidden;
+  background: url(../images/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  .bgoverlay{
+    width: 100%;
+    height: 100%;
+    background: $op-background;
+  }
 }
 footer, section {
 	display: block;
@@ -82,107 +89,47 @@ ul {
   .center {
     text-align: center;
   }
+  .h-center {
+    display: block;
+    position: absolute;
+    max-width: 70%;
+    top:50%;
+    left:15%;
+  }
+  .framed {
+    background: $op-frame;
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
   h1, h2, p, a, .text {
     margin: 0 0;
     padding: $push $push;
     font-weight: normal;
-    color: $light-color;
-    .day & {
-      color: $black;
-    }
   }
   h1 {
     font-size: 40px;
     letter-spacing: -0.7px;
+    color: $main-color;
   }
   h2 {
     font-size: 26px;
     letter-spacing: -0.5px;
+    color: $second-color;
   }
   p, a, .text {
     font-size: 16px;
     letter-spacing: -0.2px;
     line-height: 28px;
-  }
-
-  p, .text {
-    .day-add &, .day-remove & {
-      transition: color 0s linear;
-    }
-    .day-remove.day-remove-active &,
-    .day-add.day-add-active & {
-      transition: color 1s linear;
-    }
-    .day-add &,
-    .day-remove.day-remove-active & {
-      color: $light-color;
-    }
-    .day-remove & ,
-    .day-add.day-add-active & {
-      color: $black;
-    }
+    color: $second-color;
   }
   .middle {
     max-width: $width;
     min-width: $min-width;
     margin: 0 auto;
     padding: 20px 20px;
-    background: $black;
-    .day & {
-      background: $black-day;
-      .middle {
-        background: white;
-        border-color: $black;
-      }
-    }
-    .day-add &, .day-remove & {
-      transition: background 0s linear;
-    }
-    .day-remove.day-remove-active &,
-    .day-add.day-add-active & {
-      transition: background 1s linear;
-    }
-    .day-add &,
-    .day-remove.day-remove-active & {
-      background: $black;
-    }
-    .day-remove & ,
-    .day-add.day-add-active & {
-      background: $black-day;
-    }
-
-
     .middle {
         border-radius: 5px;
-        border: 1px solid $light-color;
-      }
-    .link-next {
-      margin-right: 9px;
-      padding: 5px 9px;
-      background: $light-color; 
-      color: $opgreyish;
-      cursor: pointer;
-      &:hover {
-        background: $opgreyish; 
-        color: $light-color;
-        text-decoration: none;
-      }
-    }
-    .link-articles {
-      font-size: 20px;
-      letter-spacing: -0.3px;
-      display: block;
-      text-align: center;
-      margin: 0 auto;
-      padding: 5px 0;
-      width: 250px;
-      background: $light-color; 
-      color: $opgreyish;
-      cursor: pointer;
-      &:hover {
-        background: $opgreyish;
-        color: $light-color;
-        text-decoration: none;
+        border: 1px solid $second-color;
       }
     }
     ul, ol {
@@ -193,10 +140,7 @@ ul {
         line-height: 28px;
         padding: $push $push;
         font-weight: normal;
-        color: $light-color;
-        .day & {
-          color: $black;
-        }
+        color: $second-color;
       }
     }
     .x{
@@ -206,11 +150,11 @@ ul {
         text-decoration: none;
       }
     }
-  }
+  
   .articles {
     position: relative;
     .articles-title {
-      border-bottom: 1px solid $opgreyish;
+      border-bottom: 1px solid $clicked;
     }
     .middle {
       padding: 0 20px;
@@ -247,86 +191,61 @@ ul {
  */
 .top-part {
   position: relative;
-  z-index: 2;
+  z-index: 1337;
   width: 100%;
   min-width: $min-width;
   height: $bar-height;
   padding: 0 0;
   margin: 0 auto;
-  background: $bar-bg;
-  -webkit-box-shadow: 0px 0px 8px -1px black;
-  -moz-box-shadow: 0px 0px 8px -1px black;
-  box-shadow: 0px 0px 8px -1px black;
-  .day & {
-    background: $bar-bg-day;
-  }
-  .day-add &, .day-remove & {
-    transition: background 0s linear;
-  }
-  .day-remove.day-remove-active &,
-  .day-add.day-add-active & {
-    transition: background 1s linear;
-  }
-  .day-add &,
-  .day-remove.day-remove-active & {
-    background: $bar-bg;
-  }
-  .day-remove & ,
-  .day-add.day-add-active & {
-    background: $bar-bg-day;
-  }
-
-
 
   .main-bar {
     max-width: $width;
     min-width: $min-width;
+    background: $main-color;
+    /*     -webkit-box-shadow: 0px 0px 0px 1px black;
+    -moz-box-shadow: 0px 0px 0px 1px black;
+    box-shadow: 0px 0px 0px 1px black; */
     margin: 0 auto;
     padding: 0;
     text-align: center;
-    opacity: 1;
     ul {
-      height: 55px;
-      float: right;
+      height: $bar-height;
+      overflow: hidden;
     }
-    #logo {
-      font-size: 34px;
-      text-shadow: 1px 0 0 black;
-      padding-top: 0;
-      padding-right: 7px;
-      &:hover{
-        color: $light-color;
+    .logo {
+      a {
+        font-size: 34px;
+        text-shadow: 1px 0 0 black;
+        padding-top: 0;
+        padding-right: 7px;
+        &:hover {
+          background: none !important;
+        }
       }
     }
     .bar-list li {
       list-style: none;
-      display: inline;
+      display: inline-block;
+      height: 100%;
       a { 
+        display: block;
+        height: 100%;
         padding: 9px 18px 6px;
         font-size: 24px;
         text-decoration: none;
         letter-spacing: -0.5px;
-        color: $light-color;
+        color: $second-color;
+        transition: 0.3s ease;
         &:hover {
-          color: $silver;
-        }
-      }
-      .square {
-        float: left;
-        margin-top: 10px;
-        margin-right: 50px;
-        padding: 30px 30px 0 0;
-        border: 3px solid white;
-        border-radius: 5px;
-        background-color: $bar-bg-day;
-        cursor: pointer;
-        .day & {
-          background-color: $bar-bg;
+          color: $main-color;
+          background: $second-color;
         }
       }
     }
     .clicked {
-      color: $silver !important;
+      color: $clicked !important;
+      background: none!important;
+
     }
   }
 }
@@ -336,23 +255,20 @@ ul {
  * ======
  */
 .footer-bar {
-  position: relative;
+  position: absolute;
+  bottom: 10px;
   width: 100%;
-  margin: 20px auto;
-  ul {
-    text-align: center;
-    li {
-      display: inline;
-      padding: 0 6px;
-      a {
-        font-size: 16px;
-        text-decoration: none;
-        letter-spacing: -0.3px;
-        color: $logo-color;
-      }
-      .tooltip a {
-        color: $cyan;
-      }
+  text-align: center;
+  .footer-wrap {
+    position: relative;
+    a {
+    font-size: 16px;
+    text-decoration: none;
+    letter-spacing: -0.3px;
+    color: $footer-color;
+    }
+    .tooltip a{
+      color: $main-color;
     }
   }
 }
@@ -369,39 +285,34 @@ ul {
       padding-top: 0;
       font-size: 64px;
       letter-spacing: -1px;
-      color: $bar-bg;
+      color: $main-color;
     }
     h2 {
       font-size: 35px;
       letter-spacing: -0.6px;
-      color: $logo-color;
+      color: $main-color;
     }
     .btn-start {
       max-width: 290px;
       margin: 10px auto;
       padding: 10px 0;
-      background: $bar-bg;
+      background: $main-color;
       border-radius: 12px;
-      .day & {
-        background: $bar-bg-day;
-      }
       a {
         font-size: 27px !important;
         letter-spacing: -1px;
-        color: $light-color;
-        &:hover{
-          color: $silver;
+        color: $second-color;
+        &:hover {
+          color: $main-color;
           text-decoration: none;
         }
       }
+      &:hover {
+        background: none;
+        border: 2px solid $main-color;
+      }
     }
   }
-.img-logo {
-  margin: 10px auto;
-  width: 155px;
-  height: 147px;
-  background: url(../images/owl.png);
-}
 /*
  * SMALL SCREEN VERSION
  * ====================
@@ -451,12 +362,6 @@ ul {
         }
       }
     }
-    #logo {
-      font-size: 34px;
-      text-shadow: 1px 0 0 black;
-      padding-right: 10px;
-      float: right;
-    }
     .bar-btn {
       padding: 0 12px 5px !important;
       font-size: 40px !important;
@@ -478,11 +383,8 @@ ul {
       top: 55px;
       left: 0;
       width: 200px;
-      border-top: 1px solid $light-grey;
-      background: $black;
-      .day & {
-        background: $black-day;
-      }
+      border-top: 1px solid $clicked;
+      background: $op-frame;
       /* needed for animation to  work well */
       &.ng-hide-add, .my-element.ng-hide-remove {
         transition: 0s linear all;
@@ -505,9 +407,9 @@ ul {
         padding: $push 5px;
         display: block;
         text-align: center;
-        border-bottom: 1px solid $light-grey;
-        border-left: 1px solid $light-grey;
-        border-right: 1px solid $light-grey;
+        border-bottom: 1px solid $clicked;
+        border-left: 1px solid $clicked;
+        border-right: 1px solid $clicked;
       }
     }
   }

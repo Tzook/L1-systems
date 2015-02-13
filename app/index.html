@@ -29,13 +29,13 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="styles/main.css">
 	</head>
-	<body>
+	<body><div class="bgoverlay">
 
 		<title-bar></title-bar>
 
 		<div class="main-cnt" ng-view></div>
 			 
-		<footer-bar></footer-bar>
+		<footer-bar class="footer-bar"></footer-bar>
 		
 
 		<script>
@@ -48,5 +48,6 @@
 			ga('create', 'UA-XXXXX-X');
 			ga('send', 'pageview');
     	</script>
+    </div>
 	</body>
 </html>

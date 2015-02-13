@@ -7,11 +7,11 @@
 	angular.module('siteTitlebar', [])
 	.controller('TitlebarController', ['$scope', '$location', function($scope, $location) {
 			$scope.titlebar = [
-				{"url":"/integration", "content": "intergation", "isClicked": false},
-				{"url":"/intelligence", "content": "intelligence", "isClicked": false},
-				{"url":"/aviation", "content": "aviation", "isClicked": false},
-				{"url":"/communication", "content": "communication", "isClicked": false},
-				{"url":"/contact", "content": "contact", "isClicked": false}
+				{"url":"/integration", "content": "Intergation", "isClicked": false},
+				{"url":"/intelligence", "content": "Intelligence", "isClicked": false},
+				{"url":"/aviation", "content": "Aviation", "isClicked": false},
+				{"url":"/communication", "content": "Communication", "isClicked": false},
+				{"url":"/contact", "content": "Contact Us", "isClicked": false}
 			];
 
 			/* check when URL changes */
