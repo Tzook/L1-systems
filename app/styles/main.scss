@@ -10,7 +10,6 @@ $second-color: #fff;
 $clicked: silver;
 $footer-color: rgba(0,0,0,0.9);
 $op-frame: rgba(0,0,0,0.7);
-$op-background: rgba(255,255,255,0.35);
 
   
 $push:10px;
@@ -23,13 +22,16 @@ $bar-height:58px;
  * HEADER & FIXES
  * ==============
  */
-
+* {
+  margin: 0;
+}
 html {
   width: 100%;
   height: 100%;
   -ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
   direction: ltr;
+
 } 
 body {
 	font-family: 'Open Sans', sans-serif;
@@ -42,11 +44,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  .bgoverlay{
-    width: 100%;
-    height: 100%;
-    background: $op-background;
-  }
 }
 footer, section {
 	display: block;
@@ -83,27 +80,35 @@ ul {
  * ====
  */
 .main-cnt {
-  width: 100%;
+  max-width: 100%;
+  height: 85%;
   min-width: $min-width;
   min-height: $min-height;
+  position: relative;
   .center {
     text-align: center;
   }
   .h-center {
-    display: block;
-    position: absolute;
-    transform: translate(0, -50%); // awesome trick to horizinally center
-    top:50%;
     max-width: 70%;
-    left:15%;
+    /* position: absolute;
+    transform: translate(0, -50%); // awesome trick to horizinally center */
+    /*     top:50%;
+    left:15%; */
+    margin: 50px auto;
+    h1, h2 {
+      padding-left: 0;
+      padding-right: 0;
+      margin: 15px 0;
+    }
+    p {
+      letter-spacing: 0.2px;
+    }
   }
   .framed {
     background: $op-frame;
     margin-top: 6px;
-    margin-bottom: 6px; 
-    &.center {
-      width: 50%;
-    }      
+    margin-bottom: 6px;
+    padding: 10px 10px;
   }
   h1, h2, p, a, .text {
     margin: 0 0;
@@ -249,27 +254,28 @@ ul {
     .clicked {
       color: $clicked !important;
       background: none!important;
-
     }
   }
 }
 
 /*
- * FOOTER
+ * FOOTER - ADD sticky footer (flexbox?)
  * ======
  */
 .footer-bar {
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
+  left: 0;
   width: 100%;
+  height: 25px;
   text-align: center;
   .footer-wrap {
     position: relative;
     a {
-    font-size: 16px;
-    text-decoration: none;
-    letter-spacing: -0.3px;
-    color: $footer-color;
+      font-size: 16px;
+      text-decoration: none;
+      letter-spacing: -0.3px;
+      color: $footer-color;
     }
     .tooltip a{
       color: $main-color;
