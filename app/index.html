@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="he" ng-app="myApp">
+<html lang="he" ng-app="myApp" ng-controller="MainCtrl" ng-class="{'small':isSmall}">
 	<head ng-controller="HeaderController">
 		<meta charset="UTF-8">
 		<title ng-bind="Head.getTitle()">L1-Systems - Integration specialists</title>
@@ -17,6 +17,7 @@
 		<script src="scripts/modules/headerModule.js"></script>
 		<script src="scripts/modules/titlebarModule.js"></script>
 		<script src="scripts/modules/footerModule.js"></script>
+		<script src="scripts/controllers/main.js"></script>
 		<script src="scripts/controllers/landing.js"></script>
 		<script src="scripts/controllers/integration.js"></script>
 		<script src="scripts/controllers/intelligence.js"></script>
@@ -34,7 +35,7 @@
 
 		<div class="main-cnt" ng-view></div>
 			 
-		<!-- <footer-bar></footer-bar>  -->
+		<footer-bar></footer-bar>
 		
 
 		<script>

@@ -3,6 +3,7 @@
 	angular.module('siteControllers',
 		['ngAnimate',
 		 'ui.bootstrap',
+		 'main',
 		 'landing',
 		 'integration',
 		 'intelligence',
