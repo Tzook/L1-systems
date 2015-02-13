@@ -5,7 +5,7 @@
 (function(angular){
 	'use strict';
 	angular.module('siteTitlebar', [])
-	.controller('TitlebarController', ['$scope', '$location', function($scope, $location) {
+	.controller('TitlebarCtrl', ['$scope', '$location', function($scope, $location) {
 			$scope.titlebar = [
 				{"url":"/integration", "content": "Intergation", "isClicked": false},
 				{"url":"/intelligence", "content": "Intelligence", "isClicked": false},
@@ -25,7 +25,7 @@
 	    return {
 		  	restrict: 'E',
 		  	templateUrl: 'partials/title-bar.html',
-		  	controller: 'TitlebarController'
+		  	controller: 'TitlebarCtrl'
 	    };
 	});
 })(angular);

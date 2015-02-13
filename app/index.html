@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="he" ng-app="myApp" ng-controller="MainCtrl" ng-class="{'small':isSmall}">
-	<head ng-controller="HeaderController">
+	<head ng-controller="HeaderCtrl">
 		<meta charset="UTF-8">
 		<title ng-bind="Head.getTitle()">L1-Systems - Integration specialists</title>
 		<meta name="fragment" content="!">
@@ -14,9 +14,10 @@
 		<script src="scripts/angular/angular-animate.min.js"></script>
 		<script src="scripts/angular/angular-route.min.js"></script>
 		<script src="scripts/app.js"></script>
-		<script src="scripts/modules/headerModule.js"></script>
-		<script src="scripts/modules/titlebarModule.js"></script>
-		<script src="scripts/modules/footerModule.js"></script>
+		<script src="scripts/modules/header.js"></script>
+		<script src="scripts/modules/titlebar.js"></script>
+		<script src="scripts/modules/sidebar.js"></script>
+		<script src="scripts/modules/footer.js"></script>
 		<script src="scripts/controllers/main.js"></script>
 		<script src="scripts/controllers/landing.js"></script>
 		<script src="scripts/controllers/integration.js"></script>
@@ -24,6 +25,7 @@
 		<script src="scripts/controllers/aviation.js"></script>
 		<script src="scripts/controllers/communication.js"></script>
 		<script src="scripts/controllers/contact.js"></script>
+		<script src="scripts/controllers/market.js"></script>
 		<script src="scripts/controllers/controllers.js"></script>
 
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -32,9 +34,9 @@
 	<body><div class="bgoverlay">
 
 		<title-bar></title-bar>
+		<side-bar></side-bar>
 
 		<div class="main-cnt" ng-view></div>
-			 
 		<footer-bar class="footer-bar"></footer-bar>
 		
 

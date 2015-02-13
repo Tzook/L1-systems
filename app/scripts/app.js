@@ -10,6 +10,7 @@
 		'siteControllers',
 		'siteTitlebar',
 		'siteFooterbar',
+		'siteSidebar',
 		'siteHeader'
 	])
 	.config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) {
@@ -38,6 +39,10 @@
 			templateUrl: 'partials/contact.html',
 			controller: 'ContactCtrl'
 		}).
+		when('/market/:item', {
+			templateUrl: 'partials/market.html',
+			controller: 'MarketCtrl'
+		}).		
 		otherwise({
 			redirectTo: '/landing' // default page
 		});

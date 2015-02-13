@@ -18,7 +18,7 @@
 			}
 		};
 	})
-	.controller('HeaderController', ['$scope', 'Head', function($scope, Head) {
+	.controller('HeaderCtrl', ['$scope', 'Head', function($scope, Head) {
 		$scope.Head = Head;
 	}]);;
 })(angular);

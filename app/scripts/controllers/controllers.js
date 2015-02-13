@@ -9,5 +9,6 @@
 		 'intelligence',
 		 'aviation',
 		 'communication',
+		 'market',
 		 'contact']);
 })(angular);
