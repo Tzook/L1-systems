@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="he" ng-app="myApp" ng-controller="WidthController" ng-class="{'small':isSmall, 'day':isDay}">
+	<head ng-controller="HeaderController">
+		<meta charset="UTF-8">
+		<title ng-bind="Head.getTitle()">חלום - מדריך על חלומות צלולים</title>
+		<meta name="fragment" content="!">
+		<base href="/">
+		<meta name="description" content="חלום, אתר על חלומות צלולים, הכולל מאמרים על חלומות מודעים ועל השיטות השונות להפוך לרוקם חלומות. Halom, website about lucid dreams in hebrew." ng-if="nojavascript">
+		<meta name="description" content="{{ Head.getMetaDes() }}">
+		<meta name="keywords" content="{{ Head.getMetaKey() }}">
+		<meta name="viewport" content="width=device-width">
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.7/angular.min.js"></script>
+	    <script src="scripts/bootstrap/ui-bootstrap-custom-tpls-0.12.0.min.js"></script>
+		<script src="scripts/angular/angular-animate.min.js"></script>
+		<script src="scripts/angular/angular-route.min.js"></script>
+		<script src="scripts/app.js"></script>
+		<script src="scripts/modules/headerModule.js"></script>
+		<script src="scripts/modules/titlebarModule.js"></script>
+		<script src="scripts/modules/footerModule.js"></script>
+		<script src="scripts/controllers/landingController.js"></script>
+		<script src="scripts/controllers/dreamvController.js"></script>
+		<script src="scripts/controllers/articlesController.js"></script>
+		<script src="scripts/controllers/checkController.js"></script>
+		<script src="scripts/controllers/mainController.js"></script>
+		<script src="scripts/controllers/widthController.js"></script>
+		<script src="scripts/controllers/headerController.js"></script>
+		<script src="scripts/controllers/lucidController.js"></script>
+		<script src="scripts/controllers/controllers.js"></script>
+
+		<link href='http://fonts.googleapis.com/earlyaccess/alefhebrew.css' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="styles/main.css">
+	</head>
+	<body ng-controller="MainController">
+
+		<title-bar></title-bar>
+
+		<div class="main-cnt" ng-view></div>
+			 
+		<footer-bar></footer-bar> 
+		
+		<script>
+		/* Google Analytics */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-XXXXX-X');
+			ga('send', 'pageview');
+    	</script>
+	</body>
+</html>
