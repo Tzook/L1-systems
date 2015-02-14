@@ -19,28 +19,24 @@
 			templateUrl: 'partials/landing.html',
 			controller: 'LandingCtrl'
 		}).
-		when('/integration', {
-			templateUrl: 'partials/integration.html',
-			controller: 'IntegrationCtrl'
-		}).
-		when('/intelligence', {
-			templateUrl: 'partials/intelligence.html',
-			controller: 'IntelligenceCtrl'
-		}).
-		when('/aviation', {
-			templateUrl: 'partials/aviation.html',
-			controller: 'AviationCtrl'
-		}).
-		when('/communication', {
-			templateUrl: 'partials/communication.html',
-			controller: 'CommunicationCtrl'
-		}).
 		when('/contact', {
 			templateUrl: 'partials/contact.html',
 			controller: 'ContactCtrl'
 		}).
-		when('/market/:item', {
-			templateUrl: 'partials/market.html',
+		when('/main/intelligence', {
+			redirectTo: '/main/intelligence/overview'
+		}).
+		when('/main/integration', {
+			redirectTo: '/main/integration/overview'
+		}).
+		when('/main/communication', {
+			redirectTo: '/main/communication/overview'
+		}).
+		when('/main/aviation', {
+			redirectTo: '/main/aviation/overview'
+		}).
+		when('/main/:part/:item', {
+			templateUrl: 'partials/general.html',
 			controller: 'MarketCtrl'
 		}).		
 		otherwise({

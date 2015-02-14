@@ -6,10 +6,9 @@
 	angular.module('market', [])
 	.controller('MarketCtrl', ['$scope', '$location', '$routeParams', '$http', function($scope, $location, $routeParams, $http) {
 		$scope.item = {};
-		$scope.overview = '';
-		$http.get('details/market.json').success(function(data) {
-			$scope.overview = data.overview;
-			angular.forEach(data.items, function(item) {
+		var link = 'details/' + $routeParams.part + '.json';
+		$http.get(link).success(function(data) {			
+			angular.forEach(data, function(item) {
 				if (item.name == $routeParams.item) {
 					$scope.item = item;
 				}

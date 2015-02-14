@@ -1,20 +1,24 @@
-<section style="position: absolute;">
+<section style="position: absolute;" ng-show="solutions || part=='market'">
 	<accordion>
-		<a href="">Overview</a>
-		<accordion-group heading="Solutions">
-		      hi
-		</accordion-group>
+		<span ng-show="solutions">			
+			<a href="main/{{part}}/overview">Overview</a>
+			<accordion-group heading="Solutions">
+	       		<ul>
+		      		<li ng-repeat="sol in solutions"><a href="main/{{part}}/{{sol}}">{{sol}}</a></li>
+		      	</ul>
+			</accordion-group>
+		</span>
 
 		<accordion-group heading="Market">
 		      <ul>
-		      	<li><a href="market/Federal Assets">Federal Assets</a></li>
-		      	<li><a href="market/Safe Cities">Safe Cities</a></li>
-		      	<li><a href="market/Correctional Facilities">Correctional Facilities</a></li>
-		      	<li><a href="market/Airports">Airports</a></li>
-		      	<li><a href="market/Borders">Borders</a></li>
-		      	<li><a href="market/Maritime">Maritime</a></li>
-		      	<li><a href="market/Mobile Infrastructure">Mobile Infrastructure</a></li>
-		      	<li><a href="market/Transportation">Transportation</a></li>
+		      	<li><a href="main/market/Federal Assets">Federal Assets</a></li>
+		      	<li><a href="main/market/Safe Cities">Safe Cities</a></li>
+		      	<li><a href="main/market/Correctional Facilities">Correctional Facilities</a></li>
+		      	<li><a href="main/market/Airports">Airports</a></li>
+		      	<li><a href="main/market/Borders">Borders</a></li>
+		      	<li><a href="main/market/Maritime">Maritime</a></li>
+		      	<li><a href="main/market/Mobile Infrastructure">Mobile Infrastructure</a></li>
+		      	<li><a href="main/market/Transportation">Transportation</a></li>
 		      </ul>
 		</accordion-group>
 
