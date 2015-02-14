@@ -5582,6 +5582,8 @@ ul {
       font-size: 40px !important;
       cursor: pointer;
       display: block; }
+    .small .top-part .bar-btn .clicked:hover {
+      background: #fff !important; }
   .small .top-part .show-ignored-bar {
     white-space: nowrap;
     position: absolute;
@@ -5591,6 +5593,7 @@ ul {
     width: 200px;
     border-top: 1px solid #fff;
     background: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
     /* needed for animation to  work well */ }
     .small .top-part .show-ignored-bar.ng-hide-add, .small .top-part .show-ignored-bar .my-element.ng-hide-remove {
       transition: 0s linear all; }

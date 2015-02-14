@@ -369,6 +369,11 @@ ul {
         display: block;
       }
       float: right;
+      .clicked {
+        &:hover{
+          background: $second-color !important;
+        }
+      }
     }
     .show-ignored-bar {
       white-space: nowrap;
@@ -379,6 +384,7 @@ ul {
       width: 200px;
       border-top: 1px solid $second-color;
       background: $op-frame;
+      overflow: hidden;
       /* needed for animation to  work well */
       &.ng-hide-add, .my-element.ng-hide-remove {
         transition: 0s linear all;
