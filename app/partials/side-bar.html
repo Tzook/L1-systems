@@ -1,8 +1,8 @@
-<section style="position: absolute;" ng-show="solutions || part=='market'">
+<section>
 	<accordion>
 		<span ng-show="solutions">			
 			<a href="main/{{part}}/overview">Overview</a>
-			<accordion-group heading="Solutions">
+			<accordion-group heading="Solutions" is-open="openSol">
 	       		<ul>
 		      		<li ng-repeat="sol in solutions"><a href="main/{{part}}/{{sol}}">{{sol}}</a></li>
 		      	</ul>

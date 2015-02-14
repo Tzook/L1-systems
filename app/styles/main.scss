@@ -258,7 +258,38 @@ ul {
     }
   }
 }
+/**
+ * SIDE BAR
+ * ========
+ */
+ .side-bar {
+  h1, h2, h3, h4, p, a {
+    color:black;
+  }
+ }
+/* .side-bar {
+  float: left;
+  width:20%;
+  min-width: 200px;
+  background: $second-color;
+  border-radius: 5px;
+  border: solid 1px $clicked;
+  margin-top: 10%;
+  section {   
+    //transform: translate(0, -50%);
+  }
+} */
 
+/**
+ * general-text
+ * ============
+ */
+/*  .general-text {
+ float:right;
+ max-width: 80%;
+ background: $op-frame;
+ margin-bottom: 20px;
+} */
 /*
  * FOOTER
  * ======
@@ -267,6 +298,7 @@ ul {
   display: block;
   width:100%;
   text-align: center;
+  clear: both;
   .footer-wrap {
     position: relative;
     a {

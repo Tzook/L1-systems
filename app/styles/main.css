@@ -5493,6 +5493,35 @@ ul {
       color: silver !important;
       background: none !important; }
 
+/**
+ * SIDE BAR
+ * ========
+ */
+.side-bar h1, .side-bar h2, .side-bar h3, .side-bar h4, .side-bar p, .side-bar a {
+  color: black; }
+
+/* .side-bar {
+  float: left;
+  width:20%;
+  min-width: 200px;
+  background: $second-color;
+  border-radius: 5px;
+  border: solid 1px $clicked;
+  margin-top: 10%;
+  section {   
+    //transform: translate(0, -50%);
+  }
+} */
+/**
+ * general-text
+ * ============
+ */
+/*  .general-text {
+ float:right;
+ max-width: 80%;
+ background: $op-frame;
+ margin-bottom: 20px;
+} */
 /*
  * FOOTER
  * ======
@@ -5500,7 +5529,8 @@ ul {
 .footer-bar {
   display: block;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  clear: both; }
   .footer-bar .footer-wrap {
     position: relative; }
     .footer-bar .footer-wrap a {
