@@ -10,7 +10,6 @@ $second-color: #fff;
 $clicked: silver;
 $footer-color: rgba(0,0,0,0.9);
 $op-frame: rgba(0,0,0,0.7);
-
   
 $push:10px;
 $width:960px;
@@ -83,6 +82,7 @@ ul {
 .main-cnt {
   max-width: 100%;
   min-width: $min-width;
+  height:auto !important;
   min-height: $min-height;
   //position: relative;
   .center {
@@ -259,12 +259,34 @@ ul {
   }
 }
 /**
+ * general-text
+ * ============
+ */
+ .general-text {
+ max-width: 100%;
+ height: 100%;
+ background: $op-frame;
+ margin-bottom: 20px;
+
+ img {
+  float: right;
+  display: block;
+  margin: 10px 10px;
+ }
+} 
+/**
  * SIDE BAR
  * ========
  */
  .side-bar {
+  float: left;
+  width: 25%;
+  margin: 10px 10px;
   h1, h2, h3, h4, p, a {
     color:black;
+  }
+  li {
+    list-style: none;
   }
  }
 /* .side-bar {
@@ -280,16 +302,7 @@ ul {
   }
 } */
 
-/**
- * general-text
- * ============
- */
-/*  .general-text {
- float:right;
- max-width: 80%;
- background: $op-frame;
- margin-bottom: 20px;
-} */
+
 /*
  * FOOTER
  * ======
