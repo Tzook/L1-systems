@@ -5502,6 +5502,12 @@ ul {
   min-height: 560px;
   padding: 25px 0;
   margin-bottom: 10px; }
+  .general-text .general-content ul {
+    padding: 5px 0 0 30px; }
+    .general-text .general-content ul li {
+      padding: 5px 0; }
+  .general-text .general-content {
+    padding: 10px 10px 10px 283px; }
   .general-text img {
     float: right;
     display: block;
@@ -5662,6 +5668,8 @@ ul {
     font-size: 14px; }
 .small .general-text {
   padding-top: 5px; }
+  .small .general-text .general-content {
+    padding-left: 10px; }
 .small .side-bar {
   float: none;
   margin: 0 0; }

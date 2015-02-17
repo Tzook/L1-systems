@@ -13,6 +13,12 @@
 		'siteSidebar',
 		'siteHeader'
 	])
+	/* convert the string to html format */
+	.filter('strToHtml', ['$sce', function($sce) { 
+	    return function(string) {
+	        return $sce.trustAsHtml(string);
+	    };
+	}])
 	.config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) {
 		$routeProvider.
 		when('/landing', {

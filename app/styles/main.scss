@@ -269,12 +269,20 @@ ul {
  min-height: $side-height;
  padding: 25px 0;
  margin-bottom: 10px;
-
- img {
-  float: right;
-  display: block;
-  margin: 10px 10px;
- }
+ .general-content ul {
+    padding: 5px 0 0 30px;
+    li {
+      padding: 5px 0;
+    }
+  }
+  .general-content {
+    padding: 10px 10px 10px 283px;
+  }
+  img {
+    float: right;
+    display: block;
+    margin: 10px 10px;
+  }
 } 
 /**
  * SIDE BAR
@@ -478,6 +486,9 @@ ul {
   }
   .general-text {
     padding-top: 5px;
+    .general-content {
+      padding-left: 10px; 
+    }
   }
  .side-bar {
   float:none;
