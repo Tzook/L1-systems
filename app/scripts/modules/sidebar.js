@@ -42,7 +42,7 @@
 			"Perimeter Protection"
 		],
 		"communication": [
-			"Infrastraction",
+			"Infrastructure",
 			"Satallite Communication",
 			"Radio Communication"
 		],

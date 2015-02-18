@@ -1,6 +1,6 @@
 [
 	{"name":"Overview", "content":"L1-Systems supply cutting-edge communication solutions and services that completely fit all of your needs.<br><br>Some of our communications include: <ul><li>The alert measurement systems.</li><li>Cryptography.</li><li>Radio systems.</li><li>Network-centric warfare.</li></ul>", "img":"communication"},
-	{"name":"Infrastraction", "content":"0"},
-	{"name":"Satallite Communication", "content":"L1-Systems "},
+	{"name":"Infrastructure", "content":"L1-Systems provide communcations infrastructure for wide variety of needs, scaling from business level and up to nation level.<br><br>We have proven expertise in IP-based and radio networks, while also maintaining high built-in cryptographic algorithms and electronic jamming counter measures.<ul><li>IP-based LAN / WAN</li><li>Telephony Networks</li><li>Radio Networks</li><li>Electronic Anti-Jamming</li><li>Cryptographic Algorithms</li></ul>"},
+	{"name":"Satallite Communication", "content":"L1-Systems provide the best Satallite Communication solutions avialable in the market. With cutting-edge technology and up to fourth generation commercial broadband services for either the public sector or government organizations.<br><br><ul><li>4G Satallite Communication</li><li>High Quality broadband IP access</li><li>Cellular network access</li><li>Satallite Communication on the move</li></ul>"},
 	{"name":"Radio Communication", "content":"2"}
 ]
