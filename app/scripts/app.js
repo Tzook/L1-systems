@@ -30,16 +30,16 @@
 			controller: 'ContactCtrl'
 		}).
 		when('/main/intelligence', {
-			redirectTo: '/main/intelligence/overview'
+			redirectTo: '/main/intelligence/Overview'
 		}).
 		when('/main/integration', {
-			redirectTo: '/main/integration/overview'
+			redirectTo: '/main/integration/Overview'
 		}).
 		when('/main/communication', {
-			redirectTo: '/main/communication/overview'
+			redirectTo: '/main/communication/Overview'
 		}).
 		when('/main/aviation', {
-			redirectTo: '/main/aviation/overview'
+			redirectTo: '/main/aviation/Overview'
 		}).
 		when('/main/:part/:item', {
 			templateUrl: 'partials/general.html',
