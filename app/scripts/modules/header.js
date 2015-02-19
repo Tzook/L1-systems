@@ -12,7 +12,7 @@
 			getMetaKey: function () { return keywords; },
 			// Change title, meta description and keywords
 			setHead: function (str1, str2, str3) {
-				title = str1;
+				title = "L1-Systems - " + str1;
 				des = str2;
 				keywords = str3;
 			}

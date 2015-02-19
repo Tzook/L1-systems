@@ -30,21 +30,21 @@
 			controller: 'ContactCtrl'
 		}).
 		when('/main/intelligence', {
-			redirectTo: '/main/intelligence/Overview'
+			redirectTo: '/main/intelligence/overview'
 		}).
 		when('/main/integration', {
-			redirectTo: '/main/integration/Overview'
+			redirectTo: '/main/integration/overview'
 		}).
 		when('/main/communication', {
-			redirectTo: '/main/communication/Overview'
+			redirectTo: '/main/communication/overview'
 		}).
 		when('/main/aviation', {
-			redirectTo: '/main/aviation/Overview'
+			redirectTo: '/main/aviation/overview'
 		}).
 		when('/main/:part/:item', {
 			templateUrl: 'partials/general.html',
 			controller: 'MarketCtrl'
-		}).		
+		}).	
 		otherwise({
 			redirectTo: '/landing' // default page
 		});

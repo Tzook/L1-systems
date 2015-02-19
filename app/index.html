@@ -2,10 +2,10 @@
 <html lang="he" ng-app="myApp" ng-controller="MainCtrl" ng-class="{'small':isSmall}">
 	<head ng-controller="HeaderCtrl">
 		<meta charset="UTF-8">
-		<title ng-bind="Head.getTitle()">L1-Systems - Integration specialists</title>
+		<title ng-bind="Head.getTitle()">L1-Systems - Integration Solutions</title>
 		<meta name="fragment" content="!">
 		<base href="/">
-		<meta name="description" content="L1-Systems is ..." ng-if="nojavascript">
+		<meta name="description" content="L1-Systems provide creative integration solutions using cutting-edge technologies of various kinds, providing to varios nation-level entities." ng-if="nojavascript">
 		<meta name="description" content="{{ Head.getMetaDes() }}">
 		<meta name="keywords" content="{{ Head.getMetaKey() }}">
 		<meta name="viewport" content="width=device-width">
@@ -35,6 +35,17 @@
 
 		<title-bar></title-bar>
 		<div class="main-cnt" ng-class="{'general-text':content}">
+
+			 <!--NO JAVASCRIPT/OLD BROWSER -->
+			 <div class="general-text center" ng-if="nojavascript">
+				<H1><span class="glyphicon glyphicon-send"></span></H1>
+				<H2>You are using an outdated browser or you don't have Javascript turned on.<br>
+				By all means, please update to a modern web browser.<br>
+				We will just wait here in the meantime...</H2><br>
+				<a class="btn btn-primary" href="http://www.google.com/chrome/" target="_blank">DOWNLOAD CHROME</a>
+			</div>
+			<!--END -->
+			
 			<side-bar class="side-bar" ng-show="content"></side-bar>
 			<div ng-view></div>
 		</div>
