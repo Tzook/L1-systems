@@ -9,13 +9,14 @@
 		$scope.solutions = '';
 		$scope.part = '';
 		$scope.openSol = true;
-		//$scope.$on("$routeChangeSuccess", function () {
-		var split = $location.path().split('/');
-		$scope.part = split[2];
-		
-		$scope.solutions = solutions[$scope.part];			
-		$scope.openMark = $scope.solutions ? true : false; 
-	//	});
+		$scope.$on("$routeChangeSuccess", function () {
+			$scope.openSol = true;
+			var split = $location.path().split('/');
+			$scope.part = split[2];
+			
+			$scope.solutions = solutions[$scope.part];			
+			$scope.openMark = $scope.solutions ? true : false; 
+		});
 	}])
 	.directive('sideBar', function() { // makes the entire footer-bar in another HTML template
 	    return {

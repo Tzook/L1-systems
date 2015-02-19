@@ -34,7 +34,11 @@
 	<body>
 
 		<title-bar></title-bar>
-		<div class="main-cnt" ng-view></div>
+		<div class="main-cnt" ng-class="{'general-text':content}">
+			<side-bar class="side-bar" ng-show="content"></side-bar>
+			<div ng-view></div>
+		</div>
+
 		<footer-bar class="footer-bar"></footer-bar>
 		
 
