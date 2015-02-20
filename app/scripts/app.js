@@ -22,6 +22,9 @@
 	.service('Content', ['$http', function($http) {
 		return $http.get('details/content.json');
 	}])
+	.run(['Content', function(Content) {
+		Content;
+	}])
 	.config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) {
 		$routeProvider.
 		when('/landing', {
