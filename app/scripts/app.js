@@ -19,6 +19,9 @@
 	        return $sce.trustAsHtml(string);
 	    };
 	}])
+	.service('ArticlesList', ['$http', function($http) {
+		return $http.get('articles.json');
+	}])
 	.config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) {
 		$routeProvider.
 		when('/landing', {
