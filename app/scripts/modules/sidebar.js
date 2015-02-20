@@ -20,16 +20,8 @@
 			}
 			var split = $location.path().split('/');
 			$scope.part = split[2];			
-		//	$scope.solutions = solutions[$scope.part];
-		
-			//var link = 'details/' + $scope.part + '.json';
 			Content.success(function(data) {
 				$scope.solutions = (data[0])[$scope.part];
-			//	console.log($scope.solutions);
-				/*if ($scope.solutions && $scope.solutions[0].name == "overview") {
-					$scope.solutions.shift();												
-				}*/
-			//	console.log((data[0])[$scope.part]);
 			});
 		});
 	}])
@@ -39,34 +31,5 @@
 		  	templateUrl: 'partials/side-bar.html',
 		  	controller: 'SidebarCtrl'		  	
 	    };
-	})/*
-	.constant('solutions', {
-		"intelligence":[
-			"Cyber Security",
-			"SIGINT Protection",
-			"Sensors",
-			"Covert Platforms",
-			"Intelligence Integration",
-			"Analytics",
-			"Intelligence C&C"
-		],
-		"integration": [
-			"Surveillance Solutions",
-			"Biometric Management",
-			"Command & Control Centers",
-			"Perimeter Protection"
-		],
-		"communication": [
-			"Infrastructure",
-			"Satallite Communication",
-			"Radio Communication"
-		],
-		"aviation" : [
-			"UAVs",
-			"SIGINT",
-			"Tools, Equipment & Components",
-			"Support, Maintenance, Repair",
-			"Platforms"
-		]
-	})*/;
+	});
 })(angular);

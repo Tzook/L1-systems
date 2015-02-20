@@ -20,7 +20,7 @@
 	    };
 	}])
 	.service('Content', ['$http', function($http) {
-		return $http.get('details/aviation.json');
+		return $http.get('details/content.json');
 	}])
 	.config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) {
 		$routeProvider.
@@ -46,7 +46,7 @@
 		}).
 		when('/main/:part/:item', {
 			templateUrl: 'partials/general.html',
-			controller: 'MarketCtrl'
+			controller: 'GeneralCtrl'
 		}).	
 		otherwise({
 			redirectTo: '/landing' // default page

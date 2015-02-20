@@ -5,10 +5,6 @@
 		 'ui.bootstrap',
 		 'main',
 		 'landing',
-		 'integration',
-		 'intelligence',
-		 'aviation',
-		 'communication',
-		 'market',
+		 'general',
 		 'contact']);
 })(angular);
