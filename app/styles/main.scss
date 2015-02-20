@@ -19,6 +19,7 @@ $min-height:440px;
 $bar-height:58px;
 $side-height:560px;
 $side-bar-width:250px;
+$wrap-min-height:630px;
 
 /*
  * HEADER & FIXES
@@ -46,6 +47,11 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+.sticky-wrap {
+  height: 100%;
+  min-height: $wrap-min-height;
+  margin-bottom: -30px;
 }
 footer, section {
 	display: block;

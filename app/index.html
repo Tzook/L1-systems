@@ -32,22 +32,23 @@
 		<link rel="stylesheet" href="styles/main.css">
 	</head>
 	<body>
+		<div ng-class="{'sticky-wrap':!content && !isSmall}">
+			<title-bar></title-bar>
+			<div class="main-cnt" ng-class="{'general-text':content}">
 
-		<title-bar></title-bar>
-		<div class="main-cnt" ng-class="{'general-text':content}">
-
-			 <!--NO JAVASCRIPT/OLD BROWSER -->
-			 <div class="general-text center" ng-if="nojavascript">
-				<H1><span class="glyphicon glyphicon-send"></span></H1>
-				<H2>You are using an outdated browser or you don't have Javascript turned on.<br>
-				By all means, please update to a modern web browser.<br>
-				We will just wait here in the meantime...</H2><br>
-				<a class="btn btn-primary" href="http://www.google.com/chrome/" target="_blank">DOWNLOAD CHROME</a>
+				 <!--NO JAVASCRIPT/OLD BROWSER -->
+				 <div class="general-text center" ng-if="nojavascript">
+					<H1><span class="glyphicon glyphicon-send"></span></H1>
+					<H2>You are using an outdated browser or you don't have Javascript turned on.<br>
+					By all means, please update to a modern web browser.<br>
+					We will just wait here in the meantime...</H2><br>
+					<a class="btn btn-primary" href="http://www.google.com/chrome/" target="_blank">DOWNLOAD CHROME</a>
+				</div>
+				<!--END -->
+				
+				<side-bar class="side-bar" ng-show="content"></side-bar>
+				<div ng-view class="main-animate"></div>
 			</div>
-			<!--END -->
-			
-			<side-bar class="side-bar" ng-show="content"></side-bar>
-			<div ng-view class="main-animate"></div>
 		</div>
 
 		<footer-bar class="footer-bar"></footer-bar>
