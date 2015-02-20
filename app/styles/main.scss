@@ -97,10 +97,6 @@ ul {
   }
   .h-center {
     max-width: 70%;
-    /* position: absolute;
-    transform: translate(0, -50%); // awesome trick to horizinally center */
-    /*     top:50%;
-    left:15%; */
     margin: 0 auto;
     padding-top: 40px;
     padding-bottom: 20px;
@@ -141,92 +137,22 @@ ul {
     line-height: 28px;
     color: $second-color;
   }
-  .middle {
-    max-width: $width;
-    min-width: $min-width;
-    margin: 0 auto;
-    padding: 20px 20px;
-    .middle {
-        border-radius: 5px;
-        border: 1px solid $second-color;
-      }
-    }
-    ul, ol {
-       margin-right: $push*3;
-      li {
-        font-size: 16px;
-        letter-spacing: -0.2px;
-        line-height: 28px;
-        padding: $push $push;
-        font-weight: normal;
-        color: $second-color;
-      }
-    }
-    .x{
-      font-weight: bold;
-      cursor: pointer;
-      &:hover{
-        text-decoration: none;
-      }
-    }
-  
-  .articles {
-    position: relative;
-    .articles-title {
-      border-bottom: 1px solid $clicked;
-    }
-    .middle {
-      padding: 0 20px;
-    }
-     /* .collapsing { // overwrites default values
-      -o-transition: height 1s ease-in-out;
-      transition: height 1s ease-in-out;
-         }  */
-  }
+}
 /*
  * ANIMATE PAGE-TRANSITIONS
  * ========================
  */
  .main-animate {
-  //position: relative;
    &.ng-enter {
     -webkit-transition: 1s ease all; /* Safari/Chrome */
     transition: 1s ease all; /* All other modern browsers and IE10+ */
     margin-left: 100%;
     margin-right: 100%;
-    //white-space: nowrap;
     &.ng-enter-active {
       margin-left: 0;
       margin-right: 0;
     }
   }
-    /* &.ng-leave {
-     -webkit-transition: .7s linear all; //Safari/Chrome
-     transition: .7s linear all;// All other modern browsers and IE10+
-     opacity: 1;
-        // position: absolute;
-     &.ng-leave-active {
-       opacity: 0;
-     }
-      }  */ 
-}
-
-
-  /* .main-animate.ng-enter { // new partial begins
-    transition: 1s ease-in-out opacity;
-    opacity: 0;
-    &.ng-enter-active { // new partial ends
-      opacity: 1;
-    }
-  }
-  .main-animate.ng-leave { // old partial begins
-    transition: 1s ease-in-out opacity;
-    position: absolute; // so old and new can overlap
-    opacity: 1;
-    &.ng-leave-active { // old partial ends
-      opacity: 0;
-    }
-  } */
 }
 /*
  * BAR
@@ -319,7 +245,7 @@ ul {
  * SIDE BAR
  * ========
  */
- .side-bar {
+.side-bar {
   float: left;
   width: $side-bar-width;
   margin: 10px 20px 0 10px;
@@ -349,7 +275,7 @@ ul {
       padding: 7px 5px 7px 15px;
     }
   }
- }
+}
 
 
 /*
@@ -394,11 +320,11 @@ ul {
       transition: 0.3s ease;
     }
     &:hover {
-        background: none;
-        a {
-          color: $main-color;
-          text-decoration: none;
-        }
+      background: none;
+      a {
+        color: $main-color;
+        text-decoration: none;
+      }
     }
   }
 }
@@ -521,27 +447,27 @@ ul {
       padding-left: 10px; 
     }
   }
- .side-bar {
-  float:none;
-  margin: 0 0;
-  li {
-    list-style: none;
-  }
-  .overview {
-    padding-left: 25px;
-  }
-  .panel-group {
-    margin: 10px 10px;
-  }
-  .panel-body {
-    padding: 5px 5px;
-    a {
-      font-size: 14px;
-      padding: 0 0;
-    }
+  .side-bar {
+    float:none;
+    margin: 0 0;
     li {
-      padding: 7px 5px 7px 15px;
+      list-style: none;
+    }
+    .overview {
+      padding-left: 25px;
+    }
+    .panel-group {
+      margin: 10px 10px;
+    }
+    .panel-body {
+      padding: 5px 5px;
+      a {
+        font-size: 14px;
+        padding: 0 0;
+      }
+      li {
+        padding: 7px 5px 7px 15px;
+      }
     }
   }
- }
 }
