@@ -19,8 +19,8 @@
 	        return $sce.trustAsHtml(string);
 	    };
 	}])
-	.service('ArticlesList', ['$http', function($http) {
-		return $http.get('articles.json');
+	.service('Content', ['$http', function($http) {
+		return $http.get('details/aviation.json');
 	}])
 	.config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) {
 		$routeProvider.
