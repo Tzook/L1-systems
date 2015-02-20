@@ -9,10 +9,15 @@
 		$scope.solutions = '';
 		$scope.part = '';
 		$scope.status = {
-			open: true
+			open: true,
+			openMarket: false
 		};
 		$scope.$on("$routeChangeSuccess", function () {
 			$scope.status.open = true;
+			if ($scope.isSmall) {
+				$scope.status.open = false;
+				$scope.status.openMarket = false;
+			}
 			var split = $location.path().split('/');
 			$scope.part = split[2];			
 			$scope.solutions = solutions[$scope.part];			

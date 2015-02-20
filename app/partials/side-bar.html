@@ -2,15 +2,14 @@
 	<accordion>
 		<span ng-if="solutions">			
 			<a class="overview" ng-href="main/{{part}}/overview">Overview</a>
-			<accordion-group is-open="status.open">
-			<accordion-heading>Solutions</accordion-heading>
+			<accordion-group heading="Solutions" is-open="status.open">
 	       		<ul>
 		      		<li ng-repeat="sol in solutions"><a ng-href="main/{{part}}/{{sol}}">{{sol}}</a></li>
 		      	</ul>
 			</accordion-group>
 		</span>
 
-		<accordion-group heading="Market">
+		<accordion-group heading="Market" is-open="status.openMarket">
 		      <ul>
 		      	<li><a href="main/market/Federal Assets">Federal Assets</a></li>
 		      	<li><a href="main/market/Safe Cities">Safe Cities</a></li>
