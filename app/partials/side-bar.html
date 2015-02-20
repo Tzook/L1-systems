@@ -1,11 +1,11 @@
 <section>
 	<accordion>
 		<span ng-if="solutions">			
-			<a class="overview" href="main/{{part}}/overview">Overview</a>
+			<a class="overview" ng-href="main/{{part}}/overview">Overview</a>
 			<accordion-group is-open="status.open">
 			<accordion-heading>Solutions</accordion-heading>
 	       		<ul>
-		      		<li ng-repeat="sol in solutions"><a href="main/{{part}}/{{sol}}">{{sol}}</a></li>
+		      		<li ng-repeat="sol in solutions"><a ng-href="main/{{part}}/{{sol}}">{{sol}}</a></li>
 		      	</ul>
 			</accordion-group>
 		</span>

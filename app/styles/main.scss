@@ -172,31 +172,55 @@ ul {
     .middle {
       padding: 0 20px;
     }
-    .collapsing { // overwrites default values
-      -webkit-transition: height 1s ease-in-out;
+     /* .collapsing { // overwrites default values
       -o-transition: height 1s ease-in-out;
       transition: height 1s ease-in-out;
-    }
+         }  */
   }
 /*
  * ANIMATE PAGE-TRANSITIONS
  * ========================
  */
-  &.ng-enter { // new partial begins
+ .main-animate {
+  //position: relative;
+   &.ng-enter {
+    -webkit-transition: 1s ease all; /* Safari/Chrome */
+    transition: 1s ease all; /* All other modern browsers and IE10+ */
+    margin-left: 100%;
+    margin-right: 100%;
+    //white-space: nowrap;
+    &.ng-enter-active {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+    /* &.ng-leave {
+     -webkit-transition: .7s linear all; //Safari/Chrome
+     transition: .7s linear all;// All other modern browsers and IE10+
+     opacity: 1;
+        // position: absolute;
+     &.ng-leave-active {
+       opacity: 0;
+     }
+      }  */ 
+}
+
+
+  /* .main-animate.ng-enter { // new partial begins
     transition: 1s ease-in-out opacity;
     opacity: 0;
     &.ng-enter-active { // new partial ends
       opacity: 1;
     }
   }
-  &.ng-leave { // old partial begins
+  .main-animate.ng-leave { // old partial begins
     transition: 1s ease-in-out opacity;
     position: absolute; // so old and new can overlap
     opacity: 1;
     &.ng-leave-active { // old partial ends
       opacity: 0;
     }
-  }
+  } */
 }
 /*
  * BAR

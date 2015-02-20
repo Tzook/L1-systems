@@ -13,7 +13,7 @@
 			$scope.isSmall = ($window.innerWidth < widthForSmall);
 		}, 500);
 		$scope.$on("$routeChangeSuccess", function () {
-	    	$scope.content = ($location.path().indexOf('/main') == 0)
+	    	$scope.content = ($location.path().indexOf('/main') == 0);
 		});
 
 	}]);
