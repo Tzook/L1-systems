@@ -13,9 +13,11 @@
 				{"url":"/main/communication", "content": "Communication", "isClicked": false},
 				{"url":"/contact", "content": "Contact Us", "isClicked": false}
 			];
+			$scope.isClicked = false;
 
 			/* check when URL changes */
 			$scope.$on("$routeChangeSuccess", function () {
+				$scope.isClicked = false;
 				angular.forEach($scope.titlebar, function(li, index) {
 		    		li.isClicked = ($location.path().indexOf(li.url) == 0)
 		    	});

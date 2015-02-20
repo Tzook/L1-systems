@@ -144,16 +144,22 @@ ul {
  */
  .main-animate {
    &.ng-enter {
-    -webkit-transition: all .7s ease-out;
-    -moz-transition: all .7s ease-out;
-    -o-transition: all .7s ease-out;
-    transition: all .7s ease-out;
-    margin-left: 100%;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+   // margin-left: 100%;
+   // display: block !important;
+    //position: absolute;
+    //height:0;
     //max-height: $side-height;
     //position: absolute;
     //margin-right: 100%;
+    opacity: 0;
     &.ng-enter-active {
-      margin-left: 0;
+      opacity: 1;
+     // margin-left: 0;
+     // height: 900px;
      // margin-right: 0;
     }
   }
@@ -353,12 +359,12 @@ ul {
   a {
     letter-spacing: -0.2px;
   }
-  .main-animate.ng-enter {
+  /* .main-animate.ng-enter {
     -webkit-transition: none;
     -moz-transition: none;
     -o-transition: none;
     transition: none;
-  }
+  } */
   .top-part { 
     width: 100%;
     position: relative;
@@ -408,15 +414,15 @@ ul {
     .show-ignored-bar {
       white-space: nowrap;
       position: absolute;
-      opacity: .8;
+      opacity: 1;
       top: $bar-height;
       right: 0;
-      width: 200px;
+      width: 150px;
       border-top: 1px solid $second-color;
       background: $op-frame;
       overflow: hidden;
       /* needed for animation to  work well */
-      &.ng-hide-add, .my-element.ng-hide-remove {
+      &.ng-hide-add {
         transition: 0s linear all;
       }
       &.ng-hide-add-active,
@@ -425,8 +431,8 @@ ul {
       }
       &.ng-hide-add,
       &.ng-hide-remove.ng-hide-remove-active {
-        opacity: .8;
-        width: 200px;
+        opacity: 1;
+        width: 150px;
       }
       &.ng-hide-remove,
       &.ng-hide-add.ng-hide-add-active {

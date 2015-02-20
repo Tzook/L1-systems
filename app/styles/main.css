@@ -1697,13 +1697,13 @@ ul {
  * ========================
  */
 .main-animate.ng-enter {
-  -webkit-transition: all .7s ease-out;
-  -moz-transition: all .7s ease-out;
-  -o-transition: all .7s ease-out;
-  transition: all .7s ease-out;
-  margin-left: 100%; }
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  opacity: 0; }
   .main-animate.ng-enter.ng-enter-active {
-    margin-left: 0; }
+    opacity: 1; }
 
 /*
  * BAR
@@ -1851,107 +1851,109 @@ ul {
  * SMALL SCREEN VERSION
  * ====================
  */
-.small h1 {
-  font-size: 32px;
-  letter-spacing: -0.5px; }
-.small h2 {
-  font-size: 23px;
-  letter-spacing: -0.4px; }
-.small p, .small .text {
-  font-size: 15px;
-  letter-spacing: -0.1px;
-  line-height: 18px; }
-.small a {
-  letter-spacing: -0.2px; }
-.small .main-animate.ng-enter {
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  transition: none; }
-.small .top-part {
-  width: 100%;
-  position: relative;
-  min-width: 300px;
-  height: 58px;
-  padding: 0;
-  margin: 0 auto; }
-  .small .top-part .main-bar {
+.small {
+  /* .main-animate.ng-enter {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+  } */ }
+  .small h1 {
+    font-size: 32px;
+    letter-spacing: -0.5px; }
+  .small h2 {
+    font-size: 23px;
+    letter-spacing: -0.4px; }
+  .small p, .small .text {
+    font-size: 15px;
+    letter-spacing: -0.1px;
+    line-height: 18px; }
+  .small a {
+    letter-spacing: -0.2px; }
+  .small .top-part {
     width: 100%;
+    position: relative;
     min-width: 300px;
     height: 58px;
-    margin: 0px auto;
-    padding: 0; }
-  .small .top-part ul {
-    width: inherit;
-    height: 58px;
-    overflow: visible; }
-  .small .top-part .logo {
-    float: left; }
-  .small .top-part .bar-list {
-    position: relative; }
-    .small .top-part .bar-list li a {
-      padding: 7px 12px 5px;
-      font-size: 18px;
-      letter-spacing: -0.3px; }
-  .small .top-part .bar-btn {
-    float: right; }
-    .small .top-part .bar-btn a {
-      padding: 0 12px 5px !important;
-      font-size: 40px !important;
-      cursor: pointer;
-      display: block; }
-    .small .top-part .bar-btn .clicked:hover {
-      background: white !important; }
-  .small .top-part .show-ignored-bar {
-    white-space: nowrap;
-    position: absolute;
-    opacity: .8;
-    top: 58px;
-    right: 0;
-    width: 200px;
-    border-top: 1px solid white;
-    background: rgba(0, 0, 0, 0.7);
-    overflow: hidden;
-    /* needed for animation to  work well */ }
-    .small .top-part .show-ignored-bar.ng-hide-add, .small .top-part .show-ignored-bar .my-element.ng-hide-remove {
-      transition: 0s linear all; }
-    .small .top-part .show-ignored-bar.ng-hide-add-active, .small .top-part .show-ignored-bar.ng-hide-remove-active {
-      transition: .5s linear all; }
-    .small .top-part .show-ignored-bar.ng-hide-add, .small .top-part .show-ignored-bar.ng-hide-remove.ng-hide-remove-active {
-      opacity: .8;
-      width: 200px; }
-    .small .top-part .show-ignored-bar.ng-hide-remove, .small .top-part .show-ignored-bar.ng-hide-add.ng-hide-add-active {
-      opacity: 0;
-      width: 0; }
-    .small .top-part .show-ignored-bar li a {
-      padding: 10px 5px;
-      text-align: center;
-      border-bottom: 1px solid silver;
-      border-left: 1px solid silver;
-      border-right: 1px solid silver; }
-    .small .top-part .show-ignored-bar li {
-      display: block; }
-.small .btn-start {
-  max-width: 180px; }
-  .small .btn-start a {
-    font-size: 14px; }
-.small .general-text {
-  padding-top: 5px; }
-  .small .general-text .general-content {
-    padding-left: 10px; }
-.small .side-bar {
-  float: none;
-  margin: 0 0; }
-  .small .side-bar li {
-    list-style: none; }
-  .small .side-bar .overview {
-    padding-left: 25px; }
-  .small .side-bar .panel-group {
-    margin: 10px 10px; }
-  .small .side-bar .panel-body {
-    padding: 5px 5px; }
-    .small .side-bar .panel-body a {
-      font-size: 14px;
-      padding: 0 0; }
-    .small .side-bar .panel-body li {
-      padding: 7px 5px 7px 15px; }
+    padding: 0;
+    margin: 0 auto; }
+    .small .top-part .main-bar {
+      width: 100%;
+      min-width: 300px;
+      height: 58px;
+      margin: 0px auto;
+      padding: 0; }
+    .small .top-part ul {
+      width: inherit;
+      height: 58px;
+      overflow: visible; }
+    .small .top-part .logo {
+      float: left; }
+    .small .top-part .bar-list {
+      position: relative; }
+      .small .top-part .bar-list li a {
+        padding: 7px 12px 5px;
+        font-size: 18px;
+        letter-spacing: -0.3px; }
+    .small .top-part .bar-btn {
+      float: right; }
+      .small .top-part .bar-btn a {
+        padding: 0 12px 5px !important;
+        font-size: 40px !important;
+        cursor: pointer;
+        display: block; }
+      .small .top-part .bar-btn .clicked:hover {
+        background: white !important; }
+    .small .top-part .show-ignored-bar {
+      white-space: nowrap;
+      position: absolute;
+      opacity: 1;
+      top: 58px;
+      right: 0;
+      width: 150px;
+      border-top: 1px solid white;
+      background: rgba(0, 0, 0, 0.7);
+      overflow: hidden;
+      /* needed for animation to  work well */ }
+      .small .top-part .show-ignored-bar.ng-hide-add {
+        transition: 0s linear all; }
+      .small .top-part .show-ignored-bar.ng-hide-add-active, .small .top-part .show-ignored-bar.ng-hide-remove-active {
+        transition: .5s linear all; }
+      .small .top-part .show-ignored-bar.ng-hide-add, .small .top-part .show-ignored-bar.ng-hide-remove.ng-hide-remove-active {
+        opacity: 1;
+        width: 150px; }
+      .small .top-part .show-ignored-bar.ng-hide-remove, .small .top-part .show-ignored-bar.ng-hide-add.ng-hide-add-active {
+        opacity: 0;
+        width: 0; }
+      .small .top-part .show-ignored-bar li a {
+        padding: 10px 5px;
+        text-align: center;
+        border-bottom: 1px solid silver;
+        border-left: 1px solid silver;
+        border-right: 1px solid silver; }
+      .small .top-part .show-ignored-bar li {
+        display: block; }
+  .small .btn-start {
+    max-width: 180px; }
+    .small .btn-start a {
+      font-size: 14px; }
+  .small .general-text {
+    padding-top: 5px; }
+    .small .general-text .general-content {
+      padding-left: 10px; }
+  .small .side-bar {
+    float: none;
+    margin: 0 0; }
+    .small .side-bar li {
+      list-style: none; }
+    .small .side-bar .overview {
+      padding-left: 25px; }
+    .small .side-bar .panel-group {
+      margin: 10px 10px; }
+    .small .side-bar .panel-body {
+      padding: 5px 5px; }
+      .small .side-bar .panel-body a {
+        font-size: 14px;
+        padding: 0 0; }
+      .small .side-bar .panel-body li {
+        padding: 7px 5px 7px 15px; }
