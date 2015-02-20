@@ -5,7 +5,7 @@
 (function(angular){
 	'use strict';
 	angular.module('siteSidebar', [])
-	.controller('SidebarCtrl', ['$scope', '$location', 'solutions', 'Content', function($scope, $location, solutions, Content) {
+	.controller('SidebarCtrl', ['$scope', '$location', 'Content', function($scope, $location, Content) {
 		$scope.solutions = '';
 		$scope.part = '';
 		$scope.status = {
@@ -20,13 +20,16 @@
 			}
 			var split = $location.path().split('/');
 			$scope.part = split[2];			
-			$scope.solutions = solutions[$scope.part];
+		//	$scope.solutions = solutions[$scope.part];
 		
 			//var link = 'details/' + $scope.part + '.json';
 			Content.success(function(data) {
-				console.log(data);
-				//$scope.solutions = data;
-				//$scope.solutions.shift();							
+				$scope.solutions = (data[0])[$scope.part];
+			//	console.log($scope.solutions);
+				/*if ($scope.solutions && $scope.solutions[0].name == "overview") {
+					$scope.solutions.shift();												
+				}*/
+			//	console.log((data[0])[$scope.part]);
 			});
 		});
 	}])
@@ -36,7 +39,7 @@
 		  	templateUrl: 'partials/side-bar.html',
 		  	controller: 'SidebarCtrl'		  	
 	    };
-	})
+	})/*
 	.constant('solutions', {
 		"intelligence":[
 			"Cyber Security",
@@ -65,5 +68,5 @@
 			"Support, Maintenance, Repair",
 			"Platforms"
 		]
-	});
+	})*/;
 })(angular);

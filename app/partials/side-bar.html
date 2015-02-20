@@ -1,10 +1,10 @@
 <section>
 	<accordion>
-		<span ng-if="solutions">			
-			<a class="overview" ng-href="main/{{part}}/overview">Overview</a>
+		<span ng-if="solutions && part != 'market'">			
+			<!-- <a class="overview" ng-href="main/{{part}}/overview">Overview</a> -->
 			<accordion-group heading="Solutions" is-open="status.open">
 	       		<ul>
-		      		<li ng-repeat="sol in solutions"><a ng-href="main/{{part}}/{{sol}}">{{sol}}</a></li>
+		      		<li ng-repeat="sol in solutions"><a ng-href="main/{{part}}/{{sol.name}}">{{sol.headline}}</a></li>
 		      	</ul>
 			</accordion-group>
 		</span>
