@@ -32,7 +32,7 @@
 		<link rel="stylesheet" href="styles/main.css">
 	</head>
 	<body>
-		<div ng-class="{'sticky-wrap':content || !isSmall}">
+		<div ng-class="{'sticky-wrap':!content && !isSmall}">
 			<title-bar></title-bar>
 			<div class="main-cnt" ng-class="{'general-text':content}">
 
