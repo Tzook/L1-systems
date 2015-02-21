@@ -1606,6 +1606,7 @@ body {
   width: 100%;
   height: 100%;
   margin: 0 0;
+  overflow-x: hidden;
   position: relative;
   background: url(../images/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -1910,9 +1911,9 @@ ul {
       opacity: 1;
       top: 58px;
       right: 0;
-      width: 150px;
-      border-top: 1px solid white;
-      background: rgba(0, 0, 0, 0.7);
+      width: 200px;
+      border-top: 1px solid silver;
+      background: whitesmoke;
       overflow: hidden;
       /* needed for animation to  work well */ }
       .small .top-part .show-ignored-bar.ng-hide-add {
@@ -1921,18 +1922,22 @@ ul {
         transition: .5s linear all; }
       .small .top-part .show-ignored-bar.ng-hide-add, .small .top-part .show-ignored-bar.ng-hide-remove.ng-hide-remove-active {
         opacity: 1;
-        width: 150px; }
+        right: 0; }
       .small .top-part .show-ignored-bar.ng-hide-remove, .small .top-part .show-ignored-bar.ng-hide-add.ng-hide-add-active {
         opacity: 0;
-        width: 0; }
-      .small .top-part .show-ignored-bar li a {
-        padding: 10px 5px;
-        text-align: center;
-        border-bottom: 1px solid silver;
-        border-left: 1px solid silver;
-        border-right: 1px solid silver; }
+        right: -200px; }
       .small .top-part .show-ignored-bar li {
         display: block; }
+        .small .top-part .show-ignored-bar li a {
+          padding: 10px 5px;
+          text-align: center;
+          color: #d20000;
+          border-bottom: 1px solid silver;
+          border-left: 1px solid silver;
+          border-right: 1px solid silver; }
+          .small .top-part .show-ignored-bar li a:hover {
+            background: black;
+            color: white; }
   .small .btn-start {
     max-width: 180px; }
     .small .btn-start a {
