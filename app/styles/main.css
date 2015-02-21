@@ -1606,7 +1606,6 @@ body {
   width: 100%;
   height: 100%;
   margin: 0 0;
-  overflow-x: hidden;
   position: relative;
   background: url(../images/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -1922,10 +1921,10 @@ ul {
         transition: .5s linear all; }
       .small .top-part .show-ignored-bar.ng-hide-add, .small .top-part .show-ignored-bar.ng-hide-remove.ng-hide-remove-active {
         opacity: 1;
-        right: 0; }
+        width: 200px; }
       .small .top-part .show-ignored-bar.ng-hide-remove, .small .top-part .show-ignored-bar.ng-hide-add.ng-hide-add-active {
         opacity: 0;
-        right: -200px; }
+        width: 0; }
       .small .top-part .show-ignored-bar li {
         display: block; }
         .small .top-part .show-ignored-bar li a {

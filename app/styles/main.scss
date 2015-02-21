@@ -42,7 +42,6 @@ body {
   width:100%;
   height: 100%;
   margin: 0 0;
-  overflow-x: hidden;
   position: relative;
   background: url(../images/bg.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -434,14 +433,14 @@ ul {
       &.ng-hide-add,
       &.ng-hide-remove.ng-hide-remove-active {
         opacity: 1;
-        right: 0;
-        //width: 200px;
+       // right: 0;
+        width: 200px;
       }
       &.ng-hide-remove,
       &.ng-hide-add.ng-hide-add-active {
         opacity: 0;
-        //width: 0;
-        right: -200px;
+        width: 0;
+       // right: -200px;
       }
       li {
         display: block;
